@@ -139,6 +139,17 @@ def build(rows, revision, issued, expires):
     return (json.dumps(index, sort_keys=True, ensure_ascii=False, separators=(',', ':'), allow_nan=False) + '\n').encode('utf-8')
 
 
+def validate_history(rows, previous):
+    current = {m['id']: m for m in rows}
+    for old in previous.get('mods', []):
+        require(old['id'] in current, 'Published mods cannot be removed; revoke versions instead')
+        new = current[old['id']]
+        versions = {v['version']: v for v in new['versions']}
+        for version in old['versions']:
+            require(versions.get(version['version']) == version, 'Published version changed or removed')
+        require(set(old['revoked_versions']) <= set(new['revoked_versions']), 'Revocation cannot be undone')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=('validate', 'build'))

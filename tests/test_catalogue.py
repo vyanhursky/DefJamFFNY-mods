@@ -99,3 +99,19 @@ class CatalogueTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class PublishedHistoryTests(unittest.TestCase):
+    def test_append_and_revoke_are_allowed(self):
+        old=fixture();new=copy.deepcopy(old)
+        second=copy.deepcopy(new['versions'][0]);second['version']='1.1.0'
+        new['versions'].append(second);new['revoked_versions']=['1.0.0']
+        catalogue.validate_history([new],{'mods':[old]})
+
+    def test_published_records_and_revocations_cannot_disappear(self):
+        old=fixture()
+        with self.assertRaises(ValueError):catalogue.validate_history([],{'mods':[old]})
+        changed=copy.deepcopy(old);changed['versions'][0]['archive']['size']+=1
+        with self.assertRaises(ValueError):catalogue.validate_history([changed],{'mods':[old]})
+        old['revoked_versions']=['1.0.0']
+        with self.assertRaises(ValueError):catalogue.validate_history([fixture()],{'mods':[old]})
