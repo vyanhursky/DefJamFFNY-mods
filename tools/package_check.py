@@ -4,6 +4,7 @@ Source: DefJamFFNY-recomp/setup/mods.py. No asset bytes are stored here.
 """
 import configparser
 import hashlib
+import os
 from pathlib import Path, PurePosixPath
 import re
 import shutil
@@ -30,6 +31,14 @@ def sha(path):
 def linked(path):
     path = Path(path)
     return path.is_symlink() or (hasattr(path, 'is_junction') and path.is_junction())
+
+def sync_directory(path):
+    if os.name != 'nt':
+        fd = os.open(path, os.O_RDONLY)
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
 
 def safe_relative(value):
     check(isinstance(value, str) and 0 < len(value) < 900 and '..' not in value,
@@ -152,7 +161,13 @@ def unpack_archive(archive, descriptor, destination, cancelled=lambda: None):
                     copied += len(chunk)
                     check(copied <= row.file_size, 'Archive expansion exceeds declared size')
                     output.write(chunk)
+                output.flush()
+                os.fsync(output.fileno())
             check(copied == row.file_size, 'Truncated archive entry')
             hashes['/'.join(parts)] = sha(target)
+        for directory in sorted((p for p in destination.rglob('*') if p.is_dir()),
+                                key=lambda p: len(p.parts), reverse=True):
+            sync_directory(directory)
+        sync_directory(destination)
         pack = validate_pack(destination)
     return dict(files=hashes, **pack)
