@@ -27,6 +27,10 @@ def sha(path):
     with Path(path).open('rb') as stream:
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
+def linked(path):
+    path = Path(path)
+    return path.is_symlink() or (hasattr(path, 'is_junction') and path.is_junction())
+
 def safe_relative(value):
     check(isinstance(value, str) and 0 < len(value) < 900 and '..' not in value,
           'Unsafe relative path')
@@ -84,7 +88,7 @@ def validate_pack(folder):
     def reference(value, png_only=False):
         safe_relative(value)
         path = folder.joinpath(*PurePosixPath(value).parts)
-        check(path.is_file() and not path.is_symlink(), 'Missing image: ' + value)
+        check(path.is_file() and not linked(path), 'Missing image: ' + value)
         dims = image_shape(path, png_only)
         refs.add(value)
         return dims
