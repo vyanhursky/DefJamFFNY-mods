@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       bootstrap:
-        description: First empty catalogue publication only; never reset existing history
+        description: First catalogue publication only; never reset existing history
         type: boolean
         default: false
 permissions:

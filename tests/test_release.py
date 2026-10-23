@@ -66,3 +66,19 @@ class HistoryAvailabilityTests(unittest.TestCase):
         with patch.object(release,'get',side_effect=error):
             with self.assertRaisesRegex(ValueError,'history missing'):release.previous_index([])
             self.assertEqual(release.previous_index([],bootstrap=True)['revision'],0)
+
+
+class BootstrapTests(unittest.TestCase):
+    def test_explicit_bootstrap_verifies_nonempty_first_catalogue(self):
+        with tempfile.TemporaryDirectory() as scratch:
+            root=Path(scratch); (root/'mods').mkdir()
+            (root/'catalogue-keys.json').write_text('{"keys":["'+'a'*64+'"]}')
+            # Metadata is already covered by contract tests; verify the release
+            # path scans first-publication rows rather than skipping validation.
+            rows=[{'id':'fixture'}]
+            with patch.object(release,'ROOT',root),patch.object(release.catalogue,'load_mods',return_value=rows),patch.object(release.catalogue,'validate_history'),patch.object(release.catalogue,'build',return_value=b'{}'),patch.object(release,'previous_index',return_value={'revision':0,'mods':[]}),patch.object(release,'verify_downloads') as verify,patch('sys.argv',['release','prepare','--bootstrap','--out',str(root/'out')]):
+                release.main()
+                verify.assert_called_once_with(rows)
+            with patch.object(release,'ROOT',root),patch.object(release.catalogue,'load_mods',return_value=rows),patch.object(release,'previous_index',return_value={'revision':1,'mods':[]}),patch('sys.argv',['release','prepare','--bootstrap','--out',str(root/'other')]):
+                with self.assertRaisesRegex(ValueError,'no signed catalogue'):
+                    release.main()

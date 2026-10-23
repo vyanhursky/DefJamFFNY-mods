@@ -46,8 +46,8 @@ Catalogue/tool source is MIT. Mod artwork has its own credits and permissions;
 this repository's licence does not grant rights to game artwork.
 
 Before the first Pages publication, choose the explicit **bootstrap** workflow
-option; it only accepts an empty catalogue. Later publications must fetch and
-verify existing history. An unexpected HTTP 404 fails closed rather than resetting
+option; it accepts the reviewed initial entries only when no signed history
+exists. Later publications must fetch and verify existing history. An unexpected HTTP 404 fails closed rather than resetting
 revision/history. Package validation runs without signing credentials. The
 protected signer installs only exact hash-pinned binary wheels from
 `requirements-signing.txt` on CPython 3.13, checks the prepared metadata against

@@ -76,7 +76,7 @@ def verify_downloads(rows, scan=True):
                 for mirror,url in enumerate(descriptor['urls']):
                     destination=root/'package.zip'
                     catalogue.https(url)
-                    with urllib.request.build_opener(Redirects()).open(urllib.request.Request(url,headers={'Accept-Encoding':'identity'}),timeout=30) as response,destination.open('wb') as output:
+                    with urllib.request.build_opener(Redirects()).open(urllib.request.Request(url,headers={'Accept-Encoding':'identity','User-Agent':'DefJamModCatalogue/1'}),timeout=30) as response,destination.open('wb') as output:
                         catalogue.require(response.status==200 and int(response.headers.get('Content-Length','-1'))==descriptor['size'],'Download length/status mismatch')
                         count=0
                         while chunk:=response.read(1024*1024):
@@ -93,14 +93,14 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command',choices=('prepare','sign'))
     parser.add_argument('--out',type=Path,required=True)
-    parser.add_argument('--bootstrap',action='store_true',help='Explicit first publication only; catalogue must be empty')
+    parser.add_argument('--bootstrap',action='store_true',help='Explicit first publication only; no prior signed history may exist')
     args=parser.parse_args()
     keys=json.loads((ROOT/'catalogue-keys.json').read_text())['keys']
     catalogue.require(bool(keys),'Provision and review a public signing-key pin first')
     rows=catalogue.load_mods(ROOT/'mods')
     previous=previous_index(keys,bootstrap=args.bootstrap)
-    catalogue.require(not args.bootstrap or (previous['revision']==0 and not rows),
-                      'Bootstrap is only allowed for the first empty catalogue publication')
+    catalogue.require(not args.bootstrap or previous['revision']==0,
+                      'Bootstrap is only allowed when no signed catalogue has been published')
     catalogue.validate_history(rows,previous)
     now=dt.datetime.now(dt.timezone.utc)
     if args.command=='prepare':
