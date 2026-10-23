@@ -14,7 +14,9 @@ locally from the player's own dump. The HD/Widescreen Menus pack is a separate m
 
 ## Development
 
-Python 3.10+; the builder and tests use only the standard library.
+Python 3.11+; the builder uses only the standard library. Release verification
+and its tests additionally use pinned `cryptography==50.0.2`, `cffi==2.0.0`,
+`pycparser==2.23` and `Pillow==12.3.0`, as recorded in the workflows.
 
 ```sh
 python -m unittest discover -s tests -v
@@ -30,13 +32,23 @@ See [the contract](CONTRACT.md) and [contribution rules](CONTRIBUTING.md).
 
 ## Publishing boundary
 
-PR validation has read-only permissions and no credentials. A future publishing
-workflow will rebuild the reviewed main commit, require owner approval through the
-`catalogue-release` protected environment, sign the exact index bytes, then deploy
+PR validation has read-only permissions and no credentials. The publishing
+workflow rebuilds the reviewed main commit, requires owner approval through the
+`catalogue-release` protected environment, signs the exact index bytes, then deploys
 the index and detached signature to GitHub Pages. The helper will pin the public
 key, reject rollback/expired installation metadata, and verify package size/hash.
-Signing-key provisioning and trusted deployment are not implemented by this
-foundation. Do not publish the unsigned preview as a release.
+The signing public key is pinned in `catalogue-keys.json`; its private counterpart
+is held in the protected environment, never in source. The owner must approve the
+publishing job. Trusted deployment remains pending review and Pages setup.
+Do not publish the unsigned preview as a release.
 
 Catalogue/tool source is MIT. Mod artwork has its own credits and permissions;
 this repository's licence does not grant rights to game artwork.
+
+Before the first Pages publication, choose the explicit **bootstrap** workflow
+option; it accepts the reviewed initial entries only when no signed history
+exists. Later publications must fetch and verify existing history. An unexpected HTTP 404 fails closed rather than resetting
+revision/history. Package validation runs without signing credentials. The
+protected signer installs only exact hash-pinned binary wheels from
+`requirements-signing.txt` on CPython 3.13, checks the prepared metadata against
+reviewed source, and never parses downloaded mod images.

@@ -33,7 +33,9 @@ trusted release; expiry is later than issue. The future signature covers exact
 output bytes. A signed timestamp alone does not prevent replay; clients retain
 the highest accepted revision and require nonexpired metadata for new installs.
 
-The foundation validates metadata only. Before any trusted release, add isolated
-archive download/hash/layout checks, append-only comparison against the published
-catalogue, signing, key pinning/rotation, and protected deployment. No SHA-256
-placeholder or untested package should appear in a live catalogue.
+PR validation checks metadata and synthetic fixtures. Protected publishing checks
+append-only history against the prior signed catalogue, every mirror size/hash,
+ZIP layout, referenced PNG/DDS images and capabilities, and ClamAV before signing.
+The helper retains its pinned key and highest accepted revision. Key rotation
+requires updating trusted source pins before retiring the old signing key.
+No SHA-256 placeholder or untested package should appear in a live catalogue.
