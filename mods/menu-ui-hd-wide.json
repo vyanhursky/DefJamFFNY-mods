@@ -3,7 +3,7 @@
   "name": "HD Widescreen Menus",
   "description": "Restored main-menu scenery, title/emblems and pre-fight loading backgrounds for 4:3, 16:10, 16:9, 21:9 and 32:9. Independent override; put after optional Faithful HD. RC2 needs native playtesting.",
   "authors": [
-    "Vlad"
+    "vyanhursky"
   ],
   "class": "linked",
   "licence": "Derived game artwork; rights remain with their respective owners. The project source MIT licence does not cover this artwork.",
