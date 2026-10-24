@@ -1,13 +1,13 @@
 # Def Jam Recompiled mod catalogue
 
-Source-only foundation for the curated mod list used by
+Source for the signed curated mod list used by
 [Def Jam Recompiled](https://github.com/vyanhursky/DefJamFFNY-recomp).
 
-**Development: no downloadable mods or trusted catalogue have been published yet.**
-The launcher integration and download helper are under development. Local texture
-packs remain independent of this catalogue.
+**Available in Def Jam Recompiled v0.11.0: Mod Support Beta.** Open Mods in the
+launcher and refresh the catalogue. HD Widescreen Menus 1.0.0 is available without
+turning on Show testing versions. Local texture packs remain supported.
 
-This repository holds reviewed JSON metadata, validation tools, and the future
+This repository holds reviewed JSON metadata, validation tools, and the
 signed GitHub Pages index. Derived artwork downloads belong on an external host
 (initially Cloudflare R2), never in this repository. Faithful HD is generated
 locally from the player's own dump. The HD/Widescreen Menus pack is a separate mod.
@@ -25,8 +25,9 @@ python tools/catalogue.py build --revision 1 --issued 2026-10-21T00:00:00Z --exp
 ```
 
 `build` produces an **unsigned development preview**, never a trusted release.
-The catalogue is intentionally empty until the installer, signing and release
-acceptance gates pass. No artwork, private key, game binary or dump is included.
+Published catalogue history and version records are immutable. A stable-channel
+release may reuse an accepted candidate archive without changing its bytes.
+No artwork, private key, game binary or dump is included.
 
 See [the contract](CONTRACT.md) and [contribution rules](CONTRIBUTING.md).
 
@@ -39,7 +40,7 @@ the index and detached signature to GitHub Pages. The helper will pin the public
 key, reject rollback/expired installation metadata, and verify package size/hash.
 The signing public key is pinned in `catalogue-keys.json`; its private counterpart
 is held in the protected environment, never in source. The owner must approve the
-publishing job. Trusted deployment remains pending review and Pages setup.
+publishing job. The live signed catalogue is published through GitHub Pages.
 Do not publish the unsigned preview as a release.
 
 Catalogue/tool source is MIT. Mod artwork has its own credits and permissions;

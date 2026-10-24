@@ -1,7 +1,7 @@
 {
   "id": "menu-ui-hd-wide",
   "name": "HD Widescreen Menus",
-  "description": "Restored main-menu scenery, title/emblems and pre-fight loading backgrounds for 4:3, 16:10, 16:9, 21:9 and 32:9. Independent override; put after optional Faithful HD. RC2 needs native playtesting.",
+  "description": "Restored main-menu scenery, title/emblems and pre-fight loading backgrounds for 4:3, 16:10, 16:9, 21:9 and 32:9. Independent texture override. Owner-tested on Windows and Steam Deck; known coverage gaps remain.",
   "authors": [
     "vyanhursky"
   ],
@@ -19,6 +19,33 @@
         "wide-v1"
       ],
       "reviewed": "2026-10-23",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.0.0-rc2/43bbb22cd14197091143623551f350a0b7ff622f0efccb1da058f491e7157634/menu-ui-hd-wide-v1-rc2.zip"
+        ],
+        "size": 421563157,
+        "unpacked_size": 423392524,
+        "file_count": 326,
+        "sha256": "43bbb22cd14197091143623551f350a0b7ff622f0efccb1da058f491e7157634",
+        "root": "menu-ui-hd-wide-v1-rc2"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "channel": "stable",
+      "min_recomp": "0.11.0",
+      "capabilities": [
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-10-24",
       "depends": [],
       "conflicts": [],
       "load_after": [
