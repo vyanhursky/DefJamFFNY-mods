@@ -1,7 +1,7 @@
 {
   "id": "menu-ui-hd-wide",
   "name": "HD Widescreen Menus",
-  "description": "Restored main-menu scenery, title/emblems and pre-fight loading backgrounds for 4:3, 16:10, 16:9, 21:9 and 32:9. Independent texture override. Owner-tested on Windows and Steam Deck; known coverage gaps remain.",
+  "description": "Restored menu scenery, title/emblems and pre-fight loading backgrounds for 4:3 through 32:9. Version 1.1 adds Select User ID, Choose Teams and Choose Venue widescreen artwork, repaired joins and sharper headings/fighter banners. Requires game 0.12.1; the fire-escape pan geometry fix is separate game code queued for 0.12.2. Independent texture override; Faithful HD is optional.",
   "authors": [
     "vyanhursky"
   ],
@@ -62,6 +62,33 @@
         "file_count": 326,
         "sha256": "43bbb22cd14197091143623551f350a0b7ff622f0efccb1da058f491e7157634",
         "root": "menu-ui-hd-wide-v1-rc2"
+      }
+    },
+    {
+      "version": "1.1.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-10-26",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "size": 536557056,
+        "unpacked_size": 538706855,
+        "file_count": 404,
+        "sha256": "95200fe8a01402a1b50695135102e6349309342c22132d0300aa62a92c79e724",
+        "root": "menu-ui-hd-wide-v1-1-0",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.1.0/95200fe8a01402a1b50695135102e6349309342c22132d0300aa62a92c79e724/menu-ui-hd-wide-v1.1.0.zip"
+        ]
       }
     }
   ]
