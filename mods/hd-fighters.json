@@ -1,0 +1,38 @@
+{
+  "id": "hd-fighters",
+  "name": "HD Fighters",
+  "description": "HD Fighters 0.1 (beta): 2048px main-outfit atlases for Blaze, Nyne and Trejo, using Rich Original Detail. Trejo includes the Source palette color-correction trial. Faces and alpha channels are preserved from the Faithful baseline. Art fidelity, skin tint and native playtesting remain under review. Enable Show testing versions to install. Requires game 0.12.1; Faithful HD is optional.",
+  "authors": [
+    "vyanhursky"
+  ],
+  "class": "linked",
+  "licence": "Derived game artwork; rights remain with their respective owners. The project source MIT licence does not cover this artwork.",
+  "homepage": "https://github.com/vyanhursky/DefJamFFNY-mods",
+  "revoked_versions": [],
+  "versions": [
+    {
+      "version": "0.1.0-beta.1",
+      "channel": "prerelease",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1"
+      ],
+      "reviewed": "2026-10-26",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd"
+      ],
+      "archive": {
+        "size": 19432340,
+        "unpacked_size": 19427988,
+        "file_count": 6,
+        "sha256": "bcba0164c1821f4121bba1089e806db4bf7111961a68cbef647d1c2991dfc62a",
+        "root": "hd-fighters-v0-1-0-beta-1",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/0.1.0-beta.1/bcba0164c1821f4121bba1089e806db4bf7111961a68cbef647d1c2991dfc62a/hd-fighters-v0.1.0-beta.1.zip"
+        ]
+      }
+    }
+  ]
+}
