@@ -117,6 +117,33 @@
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.2.0/bb9109ef1fa77f78796afd051c4d6c602f5dbfa0554e698f3b8746be4cbd3589/menu-ui-hd-wide-v1.2.0.zip"
         ]
       }
+    },
+    {
+      "version": "1.3.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-10-28",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "size": 679627331,
+        "unpacked_size": 683803577,
+        "file_count": 1706,
+        "sha256": "82ad6d53f3161b612110cdd84e3f9d0bde2f517a9a9f6410f9e52afcf963de24",
+        "root": "menu-ui-hd-wide-v1-3-0",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.3.0/82ad6d53f3161b612110cdd84e3f9d0bde2f517a9a9f6410f9e52afcf963de24/menu-ui-hd-wide-v1.3.0.zip"
+        ]
+      }
     }
   ]
 }
