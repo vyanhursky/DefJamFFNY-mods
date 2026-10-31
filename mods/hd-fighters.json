@@ -1,7 +1,7 @@
 {
   "id": "hd-fighters",
   "name": "HD Fighters",
-  "description": "HD Fighters 0.2 (beta): five owner-approved 2048px main-outfit restorations for Blaze, Nyne, Trejo, Redman and Henry Rollins. Rich Original Detail restores faces, hair, headwear, skin, tattoos, clothing and footwear with original-palette matching. Material alpha is preserved. Native playtesting of 0.2 is pending. Enable Show testing versions to install; requires game 0.12.1. Faithful HD is optional.",
+  "description": "HD Fighters 1.0: 218 fixed-roster texture entries covering main outfits, in-engine Story states, injury maps and five shared inputs. Includes 200 Rich Original Detail restorations with source-palette matching and preserved material alpha, plus explicit original/Lanczos fallbacks. No local-neural trials. Created-player customization, menus and prerecorded video are separate. Native playtesting remains pending. Requires game 0.12.1; Faithful HD is optional.",
   "authors": [
     "vyanhursky"
   ],
@@ -55,6 +55,30 @@
         "root": "hd-fighters-v0-2-0-beta-1",
         "urls": [
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/0.2.0-beta.1/1a10e9a714c0c2df00e6c68203213381b1cc628622ce14ae3eb20187c78a8561/hd-fighters-v0.2.0-beta.1.zip"
+        ]
+      }
+    },
+    {
+      "version": "1.0.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1"
+      ],
+      "reviewed": "2026-10-31",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd"
+      ],
+      "archive": {
+        "size": 669255742,
+        "unpacked_size": 669201715,
+        "file_count": 221,
+        "sha256": "1bea1239abb8e6b86fff85ecb9fbd0d805df2b1567183e6e8a16b6f131725e0f",
+        "root": "hd-fighters-v1-0-0",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/1.0.0/1bea1239abb8e6b86fff85ecb9fbd0d805df2b1567183e6e8a16b6f131725e0f/hd-fighters-v1.0.0.zip"
         ]
       }
     }
