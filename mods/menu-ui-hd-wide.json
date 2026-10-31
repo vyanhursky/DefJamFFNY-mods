@@ -1,7 +1,7 @@
 {
   "id": "menu-ui-hd-wide",
   "name": "HD Widescreen Menus",
-  "description": "Restored menu scenery and loading backgrounds for 4:3 through 32:9. Version 1.2 adds 1,140 sharper menu text textures, including 214 fighter-banner variants, using Stronger edge clarity. Includes all 1.1 widescreen artwork and repaired joins. Custom names and changing counters retain live fonts. Requires game 0.12.1; fire-escape geometry repair is separate game code queued for 0.12.2. Faithful HD is optional.",
+  "description": "Restored menu scenery and loading backgrounds for 4:3 through 32:9. Version 1.4 combines 1,343 approved reconstructed menu/UI texture mappings, including fighter select/loading banners, stencil headings, music labels, icons and a registered bitmap font page. Preserves all previous widescreen artwork and repaired joins. Five accepted sources retain baseline artwork. Lossless PNG optimization reduces download size without changing decoded pixels. Custom names and changing counters retain live font behavior. Requires game 0.12.1; Faithful HD is optional.",
   "authors": [
     "vyanhursky"
   ],
@@ -142,6 +142,33 @@
         "root": "menu-ui-hd-wide-v1-3-0",
         "urls": [
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.3.0/82ad6d53f3161b612110cdd84e3f9d0bde2f517a9a9f6410f9e52afcf963de24/menu-ui-hd-wide-v1.3.0.zip"
+        ]
+      }
+    },
+    {
+      "version": "1.4.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-10-30",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "size": 601895156,
+        "unpacked_size": 605772797,
+        "file_count": 1746,
+        "sha256": "f3d79f86a024b5786919ef2d6f38b1f599cb49a151d031b4a85023a5f480848d",
+        "root": "menu-ui-hd-wide-v1-4-0",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.4.0/f3d79f86a024b5786919ef2d6f38b1f599cb49a151d031b4a85023a5f480848d/menu-ui-hd-wide-v1.4.0.zip"
         ]
       }
     }
