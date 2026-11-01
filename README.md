@@ -3,12 +3,10 @@
 Source for the signed curated mod list used by
 [Def Jam Recompiled](https://github.com/vyanhursky/DefJamFFNY-recomp).
 
-**Available in Def Jam Recompiled v0.11.0: Mod Support Beta.** Open Mods in the
-launcher and refresh the catalogue. HD Widescreen Menus 1.1.0 is available on game v0.12.1 or later without
-turning on Show testing versions. Update it in Mods and restart the game; no
-game reinstall is required. This adds the approved User ID/Teams/Venue artwork
-and sharper heading/fighter-banner text. The fire-escape pan geometry repair
-is separate game code queued for v0.12.2. Local texture packs remain supported.
+Open Mods in the launcher and refresh the catalogue. **HD Widescreen Menus 1.4.0**
+is available on game 0.12.1 or later. Update the mod and restart the game; no
+reinstall is required. See [menu pack releases](docs/menu-ui-hd-wide.md) for scope,
+compatibility and immutable download records. Local texture packs remain supported.
 
 This repository holds reviewed JSON metadata, validation tools, and the
 signed GitHub Pages index. Derived artwork downloads belong on an external host
