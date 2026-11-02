@@ -8,6 +8,13 @@ is available on game 0.12.1 or later. Update the mod and restart the game; no
 reinstall is required. See [menu pack releases](docs/menu-ui-hd-wide.md) for scope,
 compatibility and immutable download records. Local texture packs remain supported.
 
+**ZARF's Spanish Translation mod 1.0** is available for game 0.13.0 or later.
+It combines ZARF's Spanish text/subtitles/font changes with 158 recreated 4× HD
+Spanish images and a translated widescreen menu wall. Install it in Mods, enable
+the language mod, then Play. Disable it and restart to return to English. Credits
+and CC BY-NC-SA 4.0 attribution travel with the download. See
+[the release notes](docs/es-zarf-1.0.0.md).
+
 This repository holds reviewed JSON metadata, validation tools, and the
 signed GitHub Pages index. Derived artwork downloads belong on an external host
 (initially Cloudflare R2), never in this repository. Faithful HD is generated

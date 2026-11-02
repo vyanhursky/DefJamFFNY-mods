@@ -1,0 +1,39 @@
+{
+  "id": "es-zarf",
+  "name": "ZARF's Spanish Translation mod",
+  "description": "Spanish translation by ZARF (MOD-ZARF): menus, Story subtitles, memory-unit messages and Spanish font accents. Includes 158 recreated 4x HD Spanish textures covering 177 changed archive slots, original-game typography and a translated widescreen menu wall. Voices remain original. Enable one language at a time in Mods; disable and restart to return to English. Requires game 0.13.0 or later.",
+  "authors": [
+    "ZARF (MOD-ZARF / MODZARF)",
+    "Def Jam Recompiled project (adaptation and HD image recreation)"
+  ],
+  "licence": "CC BY-NC-SA 4.0 (Spanish translation and adaptation); original game artwork rights remain with their respective owners.",
+  "homepage": "https://github.com/MODZARF/Parche-textos-en-espanol-DJFFNY-Compatible-con-Xbox-360",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "channel": "stable",
+      "min_recomp": "0.13.0",
+      "capabilities": [
+        "language-v1",
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-11-02",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [],
+      "archive": {
+        "size": 31545605,
+        "unpacked_size": 33368662,
+        "file_count": 195,
+        "sha256": "ed01b9995b465366daa66cc0701e0c28d8c164e891e31c01ee9ca564a68a1b45",
+        "root": "es-zarf",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/es-zarf/1.0.0/ed01b9995b465366daa66cc0701e0c28d8c164e891e31c01ee9ca564a68a1b45/es-zarf-v1.0.0.zip"
+        ]
+      }
+    }
+  ],
+  "revoked_versions": [],
+  "class": "linked"
+}
