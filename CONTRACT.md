@@ -12,8 +12,13 @@ Version fields: `version` (three-part SemVer, optional prerelease), `channel`
 (`stable` or `prerelease`), `min_recomp` (three-part version), `capabilities`
 (required runtime capability names), `reviewed` (ISO date), `depends`, `conflicts`,
 `load_after` (lists of stable mod IDs), and `archive`.
-`load_after` is a recommendation, not a hidden second load order. The initial
-helper will support texture packs only; no scripts, recipes, or native code.
+`load_after` is a recommendation, not a hidden second load order. The helper
+supports schema-1 texture packs and language packs, including a language pack's
+own texture manifest. No scripts, recipes, or native code are accepted.
+Language releases require `language-v1` and game 0.13.0 or later; their own images
+also require `textures-v1`, and widescreen slabs require `wide-v1`. Language
+targets and `DJDELTA1` headers use the released game helper's validation grammar;
+source/output hashes are checked against the player's dump at runtime.
 
 Archive fields: `urls` (nonempty HTTPS list), `size` (compressed bytes),
 `unpacked_size` (payload bytes), `file_count`, `sha256` (lowercase hex),
