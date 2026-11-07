@@ -3,7 +3,7 @@
 Source for the signed curated mod list used by
 [Def Jam Recompiled](https://github.com/vyanhursky/DefJamFFNY-recomp).
 
-Open Mods in the launcher and refresh the catalogue. **HD Widescreen Menus 1.4.0**
+Open Mods in the launcher and refresh the catalogue. **HD Widescreen Menus 1.5.0**
 is available on game 0.12.1 or later. Update the mod and restart the game; no
 reinstall is required. See [menu pack releases](docs/menu-ui-hd-wide.md) for scope,
 compatibility and immutable download records. Local texture packs remain supported.
