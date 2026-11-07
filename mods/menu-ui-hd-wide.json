@@ -1,7 +1,7 @@
 {
   "id": "menu-ui-hd-wide",
   "name": "HD Widescreen Menus",
-  "description": "Restored menu scenery and loading backgrounds for 4:3 through 32:9. Version 1.4 combines 1,343 approved reconstructed menu/UI texture mappings, including fighter select/loading banners, stencil headings, music labels, icons and a registered bitmap font page. Preserves all previous widescreen artwork and repaired joins. Five accepted sources retain baseline artwork. Lossless PNG optimization reduces download size without changing decoded pixels. Custom names and changing counters retain live font behavior. Requires game 0.12.1; Faithful HD is optional.",
+  "description": "Restored menu scenery and loading backgrounds for 4:3 through 32:9. Version 1.5 adds 1,334 approved 2D fighter portrait textures for Select, Story, Teams, roster thumbnails and match results, including 2/3/4-player crops. Preserves all 1.4 menu/UI artwork, widescreen scenery and repaired joins. Lossless PNG optimization preserves decoded pixels and metadata. New loading-screen portrait restorations are separate. Requires game 0.12.1; Faithful HD is optional.",
   "authors": [
     "vyanhursky"
   ],
@@ -169,6 +169,33 @@
         "root": "menu-ui-hd-wide-v1-4-0",
         "urls": [
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.4.0/f3d79f86a024b5786919ef2d6f38b1f599cb49a151d031b4a85023a5f480848d/menu-ui-hd-wide-v1.4.0.zip"
+        ]
+      }
+    },
+    {
+      "version": "1.5.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-11-07",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "size": 898423437,
+        "unpacked_size": 901519740,
+        "file_count": 3081,
+        "sha256": "e07876dfade123b3c8b1c17170db26a31faca2259c31cb2c1272c662c86ece22",
+        "root": "menu-ui-hd-wide-v1-5-0",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.5.0/e07876dfade123b3c8b1c17170db26a31faca2259c31cb2c1272c662c86ece22/menu-ui-hd-wide-v1.5.0.zip"
         ]
       }
     }
