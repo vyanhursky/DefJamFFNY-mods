@@ -11,6 +11,11 @@ their portrait enhancements. Enable the packs you want and restart; no game
 reinstall is required. See [menu pack releases](docs/menu-ui-hd-wide.md).
 Local texture packs remain supported.
 
+**HD Fighter Portraits 1.0.0** contains the Select/Story portraits previously
+bundled in Menus 1.5 plus all approved 2p/3p/4p loading portraits. It can be enabled
+independently of Menu/UI and the 3D HD Fighters mod. See
+[portrait pack notes](docs/hd-fighter-portraits.md).
+
 **ZARF's Spanish Translation mod 1.0** is available for game 0.13.0 or later.
 It combines ZARF's Spanish text/subtitles/font changes with 158 recreated 4× HD
 Spanish images and a translated widescreen menu wall. Install it in Mods, enable
