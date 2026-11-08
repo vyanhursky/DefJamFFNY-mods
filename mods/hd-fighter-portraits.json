@@ -1,0 +1,41 @@
+{
+  "id": "hd-fighter-portraits",
+  "name": "HD Fighter Portraits",
+  "description": "Restored 2D fighter artwork for Fighter Select, Story, Teams, roster thumbnails, results and loading screens. Includes the 1,334 native portrait textures previously bundled in Menus 1.5 plus 850 loading textures across 294 approved 2p/3p/4p layouts. Independent of HD Menus and UI and the 3D HD Fighters mod. Requires game 0.12.1; Faithful HD is optional.",
+  "authors": [
+    "vyanhursky"
+  ],
+  "class": "linked",
+  "licence": "Derived game artwork; rights remain with their respective owners. The project source MIT licence does not cover this artwork.",
+  "homepage": "https://github.com/vyanhursky/DefJamFFNY-mods/blob/main/docs/hd-fighter-portraits.md",
+  "revoked_versions": [],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1"
+      ],
+      "reviewed": "2026-11-07",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels",
+        "menu-ui-hd-wide"
+      ],
+      "archive": {
+        "size": 751193605,
+        "unpacked_size": 752327397,
+        "file_count": 2187,
+        "sha256": "c89eefe9b9ef096bd534a7d2548b008273140ed9fc7e250b81b1be546309f626",
+        "root": "hd-fighter-portraits-v1-0-0",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighter-portraits/1.0.0/c89eefe9b9ef096bd534a7d2548b008273140ed9fc7e250b81b1be546309f626/hd-fighter-portraits-v1.0.0.zip"
+        ]
+      }
+    }
+  ]
+}
