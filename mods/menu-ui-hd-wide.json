@@ -1,7 +1,7 @@
 {
   "id": "menu-ui-hd-wide",
-  "name": "HD Widescreen Menus",
-  "description": "Restored menu scenery and loading backgrounds for 4:3 through 32:9. Version 1.5 adds 1,334 approved 2D fighter portrait textures for Select, Story, Teams, roster thumbnails and match results, including 2/3/4-player crops. Preserves all 1.4 menu/UI artwork, widescreen scenery and repaired joins. Lossless PNG optimization preserves decoded pixels and metadata. New loading-screen portrait restorations are separate. Requires game 0.12.1; Faithful HD is optional.",
+  "name": "HD Menus and UI",
+  "description": "Restored menu/UI artwork, headings, fighter name banners, loading backgrounds and widescreen scenery/joins for 4:3 through 32:9. Version 1.6 separates the 1.5 fighter portrait additions into the independent HD Fighter Portraits mod; install both to retain those portraits. Existing menu art is unchanged. Requires game 0.12.1; Faithful HD is optional.",
   "authors": [
     "vyanhursky"
   ],
@@ -196,6 +196,33 @@
         "root": "menu-ui-hd-wide-v1-5-0",
         "urls": [
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.5.0/e07876dfade123b3c8b1c17170db26a31faca2259c31cb2c1272c662c86ece22/menu-ui-hd-wide-v1.5.0.zip"
+        ]
+      }
+    },
+    {
+      "version": "1.6.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-11-07",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "size": 601681446,
+        "unpacked_size": 604360335,
+        "file_count": 1747,
+        "sha256": "414b67384af8c93cfbf2c4fce7b5649c5c6e350f93680bfeec39f1afe2bc90b9",
+        "root": "menu-ui-hd-wide-v1-6-0",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.6.0/414b67384af8c93cfbf2c4fce7b5649c5c6e350f93680bfeec39f1afe2bc90b9/menu-ui-hd-wide-v1.6.0.zip"
         ]
       }
     }

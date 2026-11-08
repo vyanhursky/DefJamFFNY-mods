@@ -12,6 +12,26 @@ This catalogue owns published version metadata, compatibility, download pins, cr
 | [1.4.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.4.0/f3d79f86a024b5786919ef2d6f38b1f599cb49a151d031b4a85023a5f480848d/menu-ui-hd-wide-v1.4.0.zip) | 601,895,156 | 605,772,797 | 1,746 |
 | [1.5.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.5.0/e07876dfade123b3c8b1c17170db26a31faca2259c31cb2c1272c662c86ece22/menu-ui-hd-wide-v1.5.0.zip) | 898,423,437 | 901,519,740 | 3,081 |
 
+## 1.6.0 — independent menu and UI pack
+
+Keeps all 1,744 menu/UI PNGs from 1.4 byte-identical: 1,522 native mappings and
+80 widescreen registrations. Removes the 1,334 Select/Story portrait additions
+from the combined 1.5 package. Fighter name banners, menu typography, UI icons,
+loading backgrounds and widescreen scenery remain here. New fighter portraits
+belong to the independent HD Fighter Portraits mod. The stable catalogue identity
+remains `menu-ui-hd-wide`; published older versions and descriptors stay unchanged.
+
+Download: 601,681,446 bytes; unpacked: 604,360,335 bytes;
+1,747 files. Minimum game remains **0.12.1**, with `textures-v1`
+and `wide-v1`. Faithful HD is optional. No game rebuild or reinstall is needed.
+
+For existing 1.5 users, install **HD Fighter Portraits**, update Menus to 1.6, then
+enable the packs you want and restart. Updating Menus alone removes its bundled
+portraits; the manager does not silently install a second mod. The two current
+packs have disjoint texture IDs and can be used independently. During migration,
+load Portraits after combined Menus 1.5; their shared Select/Story PNGs are identical.
+The 3D **HD Fighters** mod remains separate.
+
 ## 1.5.0 — restored fighter portraits
 
 Adds 1,334 approved native portrait textures across 967 source-shaped variants for

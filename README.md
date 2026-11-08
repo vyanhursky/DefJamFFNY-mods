@@ -3,10 +3,13 @@
 Source for the signed curated mod list used by
 [Def Jam Recompiled](https://github.com/vyanhursky/DefJamFFNY-recomp).
 
-Open Mods in the launcher and refresh the catalogue. **HD Widescreen Menus 1.5.0**
-is available on game 0.12.1 or later. Update the mod and restart the game; no
-reinstall is required. See [menu pack releases](docs/menu-ui-hd-wide.md) for scope,
-compatibility and immutable download records. Local texture packs remain supported.
+Open Mods in the launcher and refresh the catalogue. **HD Menus and UI 1.6.0**
+keeps backgrounds, widescreen joins, typography and UI artwork together. Fighter
+portrait artwork has moved into an independent mod. Existing combined Menus 1.5
+users should install HD Fighter Portraits as well as updating Menus to retain
+their portrait enhancements. Enable the packs you want and restart; no game
+reinstall is required. See [menu pack releases](docs/menu-ui-hd-wide.md).
+Local texture packs remain supported.
 
 **ZARF's Spanish Translation mod 1.0** is available for game 0.13.0 or later.
 It combines ZARF's Spanish text/subtitles/font changes with 158 recreated 4× HD
