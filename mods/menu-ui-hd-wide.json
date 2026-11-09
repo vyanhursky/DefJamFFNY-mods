@@ -1,13 +1,13 @@
 {
   "id": "menu-ui-hd-wide",
   "name": "HD Menus and UI",
-  "description": "Restored menu/UI artwork, headings, fighter name banners, loading backgrounds and widescreen scenery/joins for 4:3 through 32:9. Version 1.6 separates the 1.5 fighter portrait additions into the independent HD Fighter Portraits mod; install both to retain those portraits. Existing menu art is unchanged. Requires game 0.12.1; Faithful HD is optional.",
+  "description": "Restored menu/UI artwork, headings, fighter name banners, loading backgrounds and widescreen scenery/joins for 4:3 through 32:9. Version 1.7 adds 43 approved 4x HUD, pause, tutorial/control and flame textures. Fighter portraits are available separately in HD Fighter Portraits. Requires game 0.12.1; Faithful HD is optional.",
   "authors": [
     "vyanhursky"
   ],
   "class": "linked",
   "licence": "Derived game artwork; rights remain with their respective owners. The project source MIT licence does not cover this artwork.",
-  "homepage": "https://github.com/vyanhursky/DefJamFFNY-recomp/pull/62",
+  "homepage": "https://github.com/vyanhursky/DefJamFFNY-mods/blob/main/docs/menu-ui-hd-wide.md",
   "revoked_versions": [],
   "versions": [
     {
@@ -223,6 +223,33 @@
         "root": "menu-ui-hd-wide-v1-6-0",
         "urls": [
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.6.0/414b67384af8c93cfbf2c4fce7b5649c5c6e350f93680bfeec39f1afe2bc90b9/menu-ui-hd-wide-v1.6.0.zip"
+        ]
+      }
+    },
+    {
+      "version": "1.7.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-11-09",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "size": 613045291,
+        "unpacked_size": 615783762,
+        "file_count": 1790,
+        "sha256": "817d0faefcd235e46a1601e319b974ea829f5d085464e09b40bc5c58e8666830",
+        "root": "menu-ui-hd-wide-v1-7-0",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.7.0/817d0faefcd235e46a1601e319b974ea829f5d085464e09b40bc5c58e8666830/menu-ui-hd-wide-v1.7.0.zip"
         ]
       }
     }
