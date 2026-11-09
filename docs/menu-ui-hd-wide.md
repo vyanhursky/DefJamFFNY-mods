@@ -11,6 +11,40 @@ This catalogue owns published version metadata, compatibility, download pins, cr
 | [1.3.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.3.0/82ad6d53f3161b612110cdd84e3f9d0bde2f517a9a9f6410f9e52afcf963de24/menu-ui-hd-wide-v1.3.0.zip) | 679,627,331 | 683,803,577 | 1,706 |
 | [1.4.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.4.0/f3d79f86a024b5786919ef2d6f38b1f599cb49a151d031b4a85023a5f480848d/menu-ui-hd-wide-v1.4.0.zip) | 601,895,156 | 605,772,797 | 1,746 |
 | [1.5.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.5.0/e07876dfade123b3c8b1c17170db26a31faca2259c31cb2c1272c662c86ece22/menu-ui-hd-wide-v1.5.0.zip) | 898,423,437 | 901,519,740 | 3,081 |
+| [1.6.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.6.0/414b67384af8c93cfbf2c4fce7b5649c5c6e350f93680bfeec39f1afe2bc90b9/menu-ui-hd-wide-v1.6.0.zip) | 601,681,446 | 604,360,335 | 1,747 |
+| [1.7.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.7.0/817d0faefcd235e46a1601e319b974ea829f5d085464e09b40bc5c58e8666830/menu-ui-hd-wide-v1.7.0.zip) | 613,045,291 | 615,783,762 | 1,790 |
+
+## 1.7.0 — HUD, pause and control artwork
+
+Adds 43 owner-approved 4x source textures for gameplay HUD artwork, results
+atlases, pause/quit panels, tutorial/controller icons and four flame frames.
+Includes the revised DANGER outline, trigger alignment, transparent pause-arrow
+center, heavier arrow frame, panel shadows and more even A/B/X/Y button colors.
+Original canvases and control geometry are retained. Twenty functional grids,
+constant swatches, binary masks and effect-source records continue using the
+original game pixels. Existing Menu/UI 1.6 artwork remains byte-identical.
+
+The complete pack contains **1,787 PNGs**, **1,565 native mappings** and **80
+widescreen registrations**. Download: **613,045,291 bytes** (613.05 MB / 584.65 MiB);
+unpacked: 615,783,762 bytes in 1,790 files. New PNG optimization saves 958,153 bytes
+(7.79%), preserving every decoded RGBA byte and every non-IDAT metadata chunk.
+Approved visible pixels and alpha remain exact through export; RGB under fully
+transparent pixels is bled for filtering. All 1,744 inherited PNGs stay unchanged.
+
+Requires **game 0.12.1 or later**, capabilities `textures-v1` and `wide-v1`.
+Refresh **Mods** in the launcher, update **HD Menus and UI**, enable it and restart
+the game. No game rebuild or reinstall is needed. Fighter portraits and 3D fighter
+skins remain separate mods; Faithful HD is optional. Previous versions remain
+available with unchanged archive pins for rollback.
+
+The released 0.12.1 archive validator accepts the exact ZIP and every installed
+PNG hash verifies. Representative macOS native checks cover HUD and pause at
+4:3, 16:9 and 21:9 plus quit confirmation, combat and match results; isolated
+save roots restore exactly. Dedicated training prompts remain unverified in-game; controller-variant and
+French localization coverage is incomplete. Their art, source-canvas, alpha and
+lossless checks pass; unexercised runtime variants are not marked verified. This is representative acceptance, not cross-platform or
+exhaustive playtesting. Production prompts, approvals, original references and
+working review assets remain private and preserved for future revisions.
 
 ## 1.6.0 — independent menu and UI pack
 
