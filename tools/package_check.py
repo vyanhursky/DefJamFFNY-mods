@@ -16,6 +16,11 @@ MAX_FILE = 512 * 1024**2
 MAX_ARCHIVE = 8 * 1024**3
 MAX_FILES = 65536
 ALLOWED = {'.ini', '.png', '.dds', '.json', '.txt', '.md', '.djd'}
+# Thunderstore packages: storefront files beside the one pack folder, opted in per
+# catalogue version by this capability (same rules as the game helper).
+STOREFRONT = 'thunderstore-zip-v1'
+STOREFRONT_FILES = {'manifest.json': 64 * 1024, 'README.md': 1024**2, 'CHANGELOG.md': 1024**2, 'icon.png': 1024**2}
+STOREFRONT_REQUIRED = ('manifest.json', 'README.md', 'icon.png')
 
 class ModError(ValueError):
     pass
@@ -168,32 +173,71 @@ def validate_textures(folder):
     return {'capabilities': ['textures-v1'] + (['wide-v1'] if parser.has_section('wide') else []),
             'texture_ids': list(dimensions), 'wide_ids': list(parser['wide']) if parser.has_section('wide') else []}
 
-def unpack_archive(archive, descriptor, destination, cancelled=lambda: None):
+def check_storefront(bundle, rows, version=None):
+    """Validate a Thunderstore package's root files. None of them is installed."""
+    import json
+    for name in STOREFRONT_REQUIRED:
+        check(name in rows, 'Thunderstore package is missing ' + name)
+    for name, row in rows.items():
+        check(row.file_size <= STOREFRONT_FILES[name], 'Oversized Thunderstore file: ' + name)
+    try:
+        manifest = json.loads(bundle.read(rows['manifest.json']).decode('utf-8-sig'),
+                              object_pairs_hook=contract.unique_object)
+        for name in ('README.md', 'CHANGELOG.md'):
+            if name in rows:
+                bundle.read(rows[name]).decode('utf-8-sig')
+    except (UnicodeDecodeError, ValueError) as error:
+        raise ModError('Invalid Thunderstore metadata: ' + str(error)) from error
+    check(isinstance(manifest, dict), 'Invalid Thunderstore manifest.json')
+    keys = ('name', 'version_number', 'website_url', 'description', 'dependencies')
+    check(all(key in manifest for key in keys), 'Thunderstore manifest.json needs ' + ', '.join(keys))
+    check(isinstance(manifest['name'], str) and re.fullmatch(r'[A-Za-z0-9_]{1,128}', manifest['name']),
+          'Invalid Thunderstore package name')
+    number = manifest['version_number']
+    check(isinstance(number, str) and re.fullmatch(r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)', number),
+          'Invalid Thunderstore version_number')
+    check(version is None or number == version.split('-')[0].split('+')[0],
+          'Thunderstore version_number differs from the catalogue version')
+    check(isinstance(manifest['description'], str) and len(manifest['description']) <= 250
+          and isinstance(manifest['website_url'], str), 'Invalid Thunderstore description or website_url')
+    check(isinstance(manifest['dependencies'], list) and all(isinstance(d, str) for d in manifest['dependencies']),
+          'Invalid Thunderstore dependencies')
+    head = bundle.read(rows['icon.png'])[:24]
+    check(head[:8] == b'\x89PNG\r\n\x1a\n' and head[12:16] == b'IHDR'
+          and struct.unpack('>II', head[16:24]) == (256, 256), 'Thunderstore icon.png must be a 256x256 PNG')
+
+
+def unpack_archive(archive, descriptor, destination, cancelled=lambda: None, storefront=False, version=None):
     check(Path(archive).stat().st_size == descriptor['size'] and sha(archive) == descriptor['sha256'],
           'Package size or SHA-256 mismatch')
     check(descriptor['size'] <= MAX_ARCHIVE and descriptor['unpacked_size'] <= 16 * 1024**3
           and descriptor['file_count'] <= MAX_FILES, 'Package exceeds installer limits')
     root = descriptor['root']
     contract.slug(root)
-    files, seen, size = [], set(), 0
+    files, seen, size, wrapper = [], set(), 0, {}
     with zipfile.ZipFile(archive) as bundle:
         check(len(bundle.infolist()) <= MAX_FILES * 2, 'Too many archive entries')
         for row in bundle.infolist():
             cancelled()
             name = row.filename[:-1] if row.is_dir() else row.filename
             parts = safe_relative(name)
-            check(parts[0] == root, 'Unexpected archive root')
             folded = name.casefold()
             check(folded not in seen, 'Duplicate/case-colliding archive path')
             seen.add(folded)
             mode = row.external_attr >> 16
             check(not row.flag_bits & 1 and stat.S_IFMT(mode) in (0, stat.S_IFREG, stat.S_IFDIR), 'Links/encrypted/special entries forbidden')
+            if storefront and name in STOREFRONT_FILES and not row.is_dir():
+                wrapper[name] = row  # exact names only; checked below, never installed
+                continue
+            check(parts[0] == root, 'Unexpected archive root')
             if row.is_dir():
                 continue
             check(len(parts) > 1 and PurePosixPath(name).suffix.lower() in ALLOWED
                   and row.file_size <= MAX_FILE, 'Unsupported/oversized archive file')
             size += row.file_size
             files.append((row, parts[1:]))
+        if storefront:
+            check_storefront(bundle, wrapper, version)
         check(len(files) == descriptor['file_count'] and size == descriptor['unpacked_size'], 'Unpacked size/file-count mismatch')
         check(shutil.disk_usage(destination.parent).free >= size + 32 * 1024**2, 'Not enough free space to install')
         destination.mkdir()

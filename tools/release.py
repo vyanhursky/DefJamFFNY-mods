@@ -20,7 +20,7 @@ from urllib.parse import urlsplit
 
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey, Ed25519PublicKey
 import catalogue
-from package_check import unpack_archive
+from package_check import STOREFRONT, unpack_archive
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = 'https://vyanhursky.github.io/DefJamFFNY-mods/index.json'
@@ -83,7 +83,7 @@ def verify_downloads(rows, scan=True):
                             count+=len(chunk);catalogue.require(count<=descriptor['size'],'Oversized response');output.write(chunk)
                     target=root/'pack'
                     if target.exists():shutil.rmtree(target)
-                    pack=unpack_archive(destination,descriptor,target)
+                    pack=unpack_archive(destination,descriptor,target,storefront=STOREFRONT in version['capabilities'],version=version['version'])
                     catalogue.require(set(pack['capabilities'])<=set(version['capabilities']),'Required pack capability omitted')
                     if scan:subprocess.run(['clamscan','--recursive','--infected','--no-summary',str(target)],check=True)
                     shutil.rmtree(target);destination.unlink()
