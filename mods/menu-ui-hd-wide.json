@@ -1,12 +1,12 @@
 {
   "id": "menu-ui-hd-wide",
   "name": "HD Menus and UI",
-  "description": "Restored menu/UI artwork, headings, fighter name banners, loading backgrounds and widescreen scenery/joins for 4:3 through 32:9. Version 1.7 adds 43 approved 4x HUD, pause, tutorial/control and flame textures. Fighter portraits are available separately in HD Fighter Portraits. Requires game 0.12.1; Faithful HD is optional.",
+  "description": "Restored menu/UI artwork, headings, fighter name banners, loading backgrounds and widescreen scenery/joins for 4:3 through 32:9. Version 1.7 adds 43 approved 4x HUD, pause, tutorial/control and flame textures. Fighter portraits are available separately in HD Fighter Portraits. Requires game 0.12.1; Faithful HD is optional. Version 1.7.1 is a licence-only update: original protectable contributions are CC BY-NC 4.0; original game artwork is excluded.",
   "authors": [
-    "vyanhursky"
+    "Vlad Yanhursky / vyanhursky"
   ],
   "class": "linked",
-  "licence": "Derived game artwork; rights remain with their respective owners. The project source MIT licence does not cover this artwork.",
+  "licence": "CC BY-NC 4.0 for original, legally protectable contributions by Vlad Yanhursky / vyanhursky; original game artwork and other third-party rights are excluded. See the bundled licence notice.",
   "homepage": "https://github.com/vyanhursky/DefJamFFNY-mods/blob/main/docs/menu-ui-hd-wide.md",
   "revoked_versions": [],
   "versions": [
@@ -250,6 +250,33 @@
         "root": "menu-ui-hd-wide-v1-7-0",
         "urls": [
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.7.0/817d0faefcd235e46a1601e319b974ea829f5d085464e09b40bc5c58e8666830/menu-ui-hd-wide-v1.7.0.zip"
+        ]
+      }
+    },
+    {
+      "version": "1.7.1",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-11-10",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "size": 613083557,
+        "unpacked_size": 615807576,
+        "file_count": 1792,
+        "sha256": "8e77e344d2bfdf1194f8ecde7b445c951a3b11e3716a11450101ed08c0e15114",
+        "root": "menu-ui-hd-wide-v1-7-1",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.7.1/8e77e344d2bfdf1194f8ecde7b445c951a3b11e3716a11450101ed08c0e15114/menu-ui-hd-wide-v1.7.1.zip"
         ]
       }
     }
