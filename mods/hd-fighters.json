@@ -1,13 +1,13 @@
 {
   "id": "hd-fighters",
   "name": "HD Fighters",
-  "description": "HD Fighters 1.0: 218 fixed-roster texture entries covering main outfits, in-engine Story states, injury maps and five shared inputs. Includes 200 Rich Original Detail restorations with source-palette matching and preserved material alpha, plus explicit original/Lanczos fallbacks. No local-neural trials. Created-player customization, menus and prerecorded video are separate. Native playtesting remains pending. Requires game 0.12.1; Faithful HD is optional.",
+  "description": "HD Fighters 1.0: 218 fixed-roster texture entries covering main outfits, in-engine Story states, injury maps and five shared inputs. Includes 200 Rich Original Detail restorations with source-palette matching and preserved material alpha, plus explicit original/Lanczos fallbacks. No local-neural trials. Created-player customization, menus and prerecorded video are separate. Native playtesting remains pending. Requires game 0.12.1; Faithful HD is optional. Version 1.0.1 is a licence-only update: original protectable contributions are CC BY-NC 4.0; original game artwork is excluded.",
   "authors": [
-    "vyanhursky"
+    "Vlad Yanhursky / vyanhursky"
   ],
   "class": "linked",
-  "licence": "Derived game artwork; rights remain with their respective owners. The project source MIT licence does not cover this artwork.",
-  "homepage": "https://github.com/vyanhursky/DefJamFFNY-mods",
+  "licence": "CC BY-NC 4.0 for original, legally protectable contributions by Vlad Yanhursky / vyanhursky; original game artwork and other third-party rights are excluded. See the bundled licence notice.",
+  "homepage": "https://github.com/vyanhursky/DefJamFFNY-mods/blob/main/docs/hd-fighters.md",
   "revoked_versions": [],
   "versions": [
     {
@@ -79,6 +79,30 @@
         "root": "hd-fighters-v1-0-0",
         "urls": [
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/1.0.0/1bea1239abb8e6b86fff85ecb9fbd0d805df2b1567183e6e8a16b6f131725e0f/hd-fighters-v1.0.0.zip"
+        ]
+      }
+    },
+    {
+      "version": "1.0.1",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1"
+      ],
+      "reviewed": "2026-11-10",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd"
+      ],
+      "archive": {
+        "size": 669268839,
+        "unpacked_size": 669225548,
+        "file_count": 223,
+        "sha256": "cc6d43e4008d99c1dcaac207bc47d89e562f4cb9aa0e7b7993a423fb885b43a8",
+        "root": "hd-fighters-v1-0-1",
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/1.0.1/cc6d43e4008d99c1dcaac207bc47d89e562f4cb9aa0e7b7993a423fb885b43a8/hd-fighters-v1.0.1.zip"
         ]
       }
     }

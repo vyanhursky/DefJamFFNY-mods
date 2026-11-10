@@ -1,0 +1,34 @@
+HD packs: permissions and attribution
+
+Original, legally protectable contributions by Vlad Yanhursky / vyanhursky
+are licensed under Creative Commons Attribution-NonCommercial 4.0 International
+(CC BY-NC 4.0): https://creativecommons.org/licenses/by-nc/4.0/
+The full legal text is in CC-BY-NC-4.0.txt alongside this notice.
+
+Scope: only copyright and similar rights held by Vlad Yanhursky / vyanhursky
+in original texture-mapping selection/arrangement, creative restoration and
+upscale edits, widescreen extensions, and pack selection/assembly. This notice
+does not assert that factual texture IDs, purely mechanical mappings, automated
+upscaling or AI-generated pixels are necessarily protected by copyright.
+
+Credit: Texture mapping, restoration and upscale work by
+Vlad Yanhursky / vyanhursky.
+Source: https://github.com/vyanhursky/DefJamFFNY-mods
+
+You may share and adapt the covered contributions for noncommercial purposes
+under CC BY-NC 4.0 without requesting individual approval. Retain appropriate
+credit and this licence notice, provide the licence link, and indicate changes.
+Credit may be provided in any reasonable manner; it must not imply endorsement.
+The legal text controls. These permissions are irrevocable while its terms are
+met, and do not require adaptations to carry a ShareAlike licence.
+
+Excluded material: original Def Jam: Fight for NY textures, characters, logos,
+other game artwork, and all other third-party material remain subject to their
+respective rights holders' terms. No ownership of or permission concerning that
+material is claimed or granted. This licence does not provide all permissions
+that may be needed to redistribute a complete derived game texture.
+
+The catalogue and tooling source retain their separate MIT licence. ZARF's
+Spanish translation/adaptation retains CC BY-NC-SA 4.0; it is not relicensed here.
+This notice applies to the HD licence-update releases and later releases that
+include it; earlier immutable archives retain their original bundled notices.
