@@ -27,7 +27,8 @@ and CC BY-NC-SA 4.0 attribution travel with the download. See
 
 This repository holds reviewed JSON metadata, validation tools, and the
 signed GitHub Pages index. Derived artwork downloads belong on an external host
-(initially Cloudflare R2), never in this repository. Faithful HD is generated
+(Cloudflare R2, moving to the [Thunderstore community](https://thunderstore.io/c/def-jam-fight-for-ny-recompiled/)
+with R2 as a mirror; see [docs/thunderstore.md](docs/thunderstore.md)), never in this repository. Faithful HD is generated
 locally from the player's own dump. The HD/Widescreen Menus pack is a separate mod.
 
 ## Development

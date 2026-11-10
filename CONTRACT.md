@@ -26,6 +26,16 @@ Archive fields: `urls` (nonempty HTTPS list), `size` (compressed bytes),
 Runtime minimum/capability values must come from measured compatibility evidence.
 An entry is not compatible merely because its JSON validates.
 
+Thunderstore uploads: a version whose `capabilities` include `thunderstore-zip-v1`
+may also carry `manifest.json`, `README.md`, a 256x256 `icon.png` and optionally
+`CHANGELOG.md` at the ZIP root, beside the one pack folder. No other root file is
+accepted. Those files are checked and never installed; `size`/`sha256` cover the
+whole ZIP, while `unpacked_size`, `file_count` and `root` describe the pack folder.
+The manifest's `version_number` must equal the version's release number. Helpers
+without this support do not advertise the capability, so they never select such a
+version. Thunderstore `dependencies` are not resolved; `depends` stays authoritative.
+Build uploads with `tools/thunderstore.py` ([docs/thunderstore.md](docs/thunderstore.md)).
+
 Released versions are immutable. Append versions; use `revoked_versions` to
 withdraw existing versions without changing their pinned records. Version order
 is publication order, not version comparison. Clients select compatible versions
