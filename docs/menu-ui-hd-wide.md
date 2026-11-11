@@ -13,6 +13,27 @@ This catalogue owns published version metadata, compatibility, download pins, cr
 | [1.5.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.5.0/e07876dfade123b3c8b1c17170db26a31faca2259c31cb2c1272c662c86ece22/menu-ui-hd-wide-v1.5.0.zip) | 898,423,437 | 901,519,740 | 3,081 |
 | [1.6.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.6.0/414b67384af8c93cfbf2c4fce7b5649c5c6e350f93680bfeec39f1afe2bc90b9/menu-ui-hd-wide-v1.6.0.zip) | 601,681,446 | 604,360,335 | 1,747 |
 | [1.7.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.7.0/817d0faefcd235e46a1601e319b974ea829f5d085464e09b40bc5c58e8666830/menu-ui-hd-wide-v1.7.0.zip) | 613,045,291 | 615,783,762 | 1,790 |
+| [1.7.1](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.7.1/8e77e344d2bfdf1194f8ecde7b445c951a3b11e3716a11450101ed08c0e15114/menu-ui-hd-wide-v1.7.1.zip) | 613,083,557 | 615,807,576 | 1,792 |
+
+## 1.7.1 — licence and attribution update
+
+The original, legally protectable contributions by **Vlad Yanhursky / vyanhursky**
+are now offered under **CC BY-NC 4.0**. See [the shared HD pack permissions](hd-pack-licensing.md)
+for scope, required credit and third-party exclusions. The ZIP includes `LICENSE.txt`
+and the complete `CC-BY-NC-4.0.txt` legal text. This is a licence-only update from
+1.7.0: all 1,787 texture files, 1,565 native
+mappings and 80 widescreen registrations are unchanged. Only the display
+name, release receipt and documentation change. Runtime minimum, capabilities,
+load-order recommendations and existing validation limitations remain unchanged.
+
+[Download 1.7.1](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.7.1/8e77e344d2bfdf1194f8ecde7b445c951a3b11e3716a11450101ed08c0e15114/menu-ui-hd-wide-v1.7.1.zip): **613,083,557 bytes**
+(613.1 MB); unpacked **615,807,576 bytes**, **1,792 files**.
+SHA-256: `8e77e344d2bfdf1194f8ecde7b445c951a3b11e3716a11450101ed08c0e15114`.
+
+Existing archives and published version descriptors remain immutable. This licence
+notice accompanies this new release; it does not silently rewrite older ZIPs or
+change the licensing of source code, original game artwork or ZARF's translation.
+
 
 ## 1.7.0 — HUD, pause and control artwork
 

@@ -3,17 +3,25 @@
 Source for the signed curated mod list used by
 [Def Jam Recompiled](https://github.com/vyanhursky/DefJamFFNY-recomp).
 
-Open Mods in the launcher and refresh the catalogue. **HD Menus and UI 1.7.0**
+Open Mods in the launcher and refresh the catalogue. **HD Menus and UI 1.7.1**
 adds sharper gameplay HUD, pause panels, tutorial/controller icons and flame
 artwork while retaining all existing menu backgrounds, widescreen joins and text.
-The complete download is **613.05 MB**. Enable the mod and restart; game 0.12.1 or
+The complete download is **613.08 MB**. Enable the mod and restart; game 0.12.1 or
 later is supported without a rebuild or reinstall. Fighter portraits remain in
 the independent HD Fighter Portraits mod. Existing combined Menus 1.5 users should
 install that mod as well as updating Menus to retain their portrait enhancements.
 See [menu pack releases and validation coverage](docs/menu-ui-hd-wide.md).
 Local texture packs remain supported.
 
-**HD Fighter Portraits 1.0.0** contains the Select/Story portraits previously
+**HD Fighters 1.0.1**, **HD Fighter Portraits 1.0.1** and **HD Menus and UI 1.7.1**
+are licence-only updates: original, legally protectable contributions by
+**Vlad Yanhursky / vyanhursky** are available under **CC BY-NC 4.0**. Their texture
+bytes, mapping and runtime requirements are unchanged. Original game artwork is
+excluded and remains subject to its rights holders. See [permissions and attribution](docs/hd-pack-licensing.md)
+and the [HD Fighters notes](docs/hd-fighters.md). Source code retains MIT; ZARF's
+translation retains CC BY-NC-SA 4.0.
+
+**HD Fighter Portraits 1.0.1** contains the Select/Story portraits previously
 bundled in Menus 1.5 plus all approved 2p/3p/4p loading portraits. It can be enabled
 independently of Menu/UI and the 3D HD Fighters mod. See
 [portrait pack notes](docs/hd-fighter-portraits.md).

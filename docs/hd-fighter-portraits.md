@@ -1,4 +1,25 @@
-# HD Fighter Portraits 1.0.0
+# HD Fighter Portraits
+
+
+## 1.0.1 — licence and attribution update
+
+The original, legally protectable contributions by **Vlad Yanhursky / vyanhursky**
+are now offered under **CC BY-NC 4.0**. See [the shared HD pack permissions](hd-pack-licensing.md)
+for scope, required credit and third-party exclusions. The ZIP includes `LICENSE.txt`
+and the complete `CC-BY-NC-4.0.txt` legal text. This is a licence-only update from
+1.0.0: all 2,184 texture files, 2,184 native
+mappings and 0 widescreen registrations are unchanged. Only the display
+name, release receipt and documentation change. Runtime minimum, capabilities,
+load-order recommendations and existing validation limitations remain unchanged.
+
+[Download 1.0.1](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighter-portraits/1.0.1/074cbe506e7da9fcb0911959cefec92ecd865f723ff06258d2b9873b4f1631db/hd-fighter-portraits-v1.0.1.zip): **751,238,253 bytes**
+(751.2 MB); unpacked **752,351,179 bytes**, **2,189 files**.
+SHA-256: `074cbe506e7da9fcb0911959cefec92ecd865f723ff06258d2b9873b4f1631db`.
+
+Existing archives and published version descriptors remain immutable. This licence
+notice accompanies this new release; it does not silently rewrite older ZIPs or
+change the licensing of source code, original game artwork or ZARF's translation.
+
 
 Independent 2D portrait mod, catalogue ID `hd-fighter-portraits`. Contains 2,184
 native textures: the 1,334 approved Select/Story/team/roster/result textures from
@@ -22,7 +43,7 @@ The manager does not silently add dependencies. Older 1.5 bytes stay available.
 If temporarily using combined Menus 1.5 with Portraits, load Portraits afterward;
 the 1,334 shared Select/Story mappings contain identical published PNG bytes.
 
-## Immutable archive
+## Previous 1.0.0 immutable archive
 
 Download: 751,193,605 bytes (751.2 MB); unpacked:
 752,327,397 bytes; 2,187 files. Exact
@@ -35,5 +56,6 @@ results accompany the release PR; representative checks do not certify every
 fighter or platform. Production prompts, per-image approvals, raw outputs and
 working review projects remain private and preserved for future revisions.
 
-Derived game artwork; rights remain with their respective owners. The catalogue
-source MIT licence does not cover artwork. Credits: vyanhursky.
+Original game artwork remains subject to its respective rights holders.
+For the 1.0.1 contribution licence and credit, see [HD pack permissions](hd-pack-licensing.md).
+The catalogue/tooling source retains its separate MIT licence.
