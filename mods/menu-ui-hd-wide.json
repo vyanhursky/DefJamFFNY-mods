@@ -8,7 +8,15 @@
   "class": "linked",
   "licence": "CC BY-NC 4.0 for original, legally protectable contributions by Vlad Yanhursky / vyanhursky; original game artwork and other third-party rights are excluded. See the bundled licence notice.",
   "homepage": "https://github.com/vyanhursky/DefJamFFNY-mods/blob/main/docs/menu-ui-hd-wide.md",
-  "revoked_versions": [],
+  "revoked_versions": [
+    "1.0.0-rc2",
+    "1.0.0",
+    "1.1.0",
+    "1.2.0",
+    "1.3.0",
+    "1.4.0",
+    "1.5.0"
+  ],
   "versions": [
     {
       "version": "1.0.0-rc2",
