@@ -3,6 +3,12 @@
 Source for the signed curated mod list used by
 [Def Jam Recompiled](https://github.com/vyanhursky/DefJamFFNY-recomp).
 
+**HD Fighters 1.1.0** restores the final 13 fighter textures, including Carmen
+Electra B, David Banner and the remaining injury maps. It contains 213 AI-assisted
+fighter atlas/secondary restorations plus five preserved shared inputs; the other
+205 PNG files are unchanged. Download **681.53 MB**, enable the mod and restart.
+See [HD Fighters release notes and comparisons](docs/hd-fighters.md).
+
 Open Mods in the launcher and refresh the catalogue. **HD Menus and UI 1.7.1**
 adds sharper gameplay HUD, pause panels, tutorial/controller icons and flame
 artwork while retaining all existing menu backgrounds, widescreen joins and text.

@@ -1,7 +1,7 @@
 {
   "id": "hd-fighters",
   "name": "HD Fighters",
-  "description": "HD Fighters 1.0: 218 fixed-roster texture entries covering main outfits, in-engine Story states, injury maps and five shared inputs. Includes 200 Rich Original Detail restorations with source-palette matching and preserved material alpha, plus explicit original/Lanczos fallbacks. No local-neural trials. Created-player customization, menus and prerecorded video are separate. Native playtesting remains pending. Requires game 0.12.1; Faithful HD is optional. Version 1.0.1 is a licence-only update: original protectable contributions are CC BY-NC 4.0; original game artwork is excluded.",
+  "description": "HD Fighters 1.1: 218 texture entries covering 69 named characters, main/additional outfits, identified in-engine Story states and secondary/injury maps. All 213 fighter atlas/secondary entries have AI-assisted Rich Original Detail restorations with source-palette matching and preserved material alpha; five shared sparkle/tape inputs retain native pixels. Version 1.1 restores the final 13 entries using Gemini, with 205 texture files unchanged. No mesh or gameplay changes. Created-player customization, portraits, menus and prerecorded video are separate. Requires game 0.12.1; Faithful HD is optional. Original protectable contributions are CC BY-NC 4.0; original game artwork is excluded.",
   "authors": [
     "Vlad Yanhursky / vyanhursky"
   ],
@@ -104,6 +104,30 @@
         "urls": [
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/1.0.1/cc6d43e4008d99c1dcaac207bc47d89e562f4cb9aa0e7b7993a423fb885b43a8/hd-fighters-v1.0.1.zip"
         ]
+      }
+    },
+    {
+      "version": "1.1.0",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1"
+      ],
+      "reviewed": "2026-11-13",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd"
+      ],
+      "archive": {
+        "urls": [
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/1.1.0/eddb7f68011788751472739de059aae9eaf130b8b479fcdcc14c72d88df0be0e/hd-fighters-v1.1.0.zip"
+        ],
+        "size": 681534159,
+        "unpacked_size": 681681076,
+        "file_count": 223,
+        "sha256": "eddb7f68011788751472739de059aae9eaf130b8b479fcdcc14c72d88df0be0e",
+        "root": "hd-fighters-v1-1-0"
       }
     }
   ]

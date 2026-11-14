@@ -2,6 +2,48 @@
 
 Independent 3D fighter texture mod, catalogue ID `hd-fighters`.
 
+## 1.1.0 — final fighter restorations
+
+Adds the last **13 owner-approved restorations** using Google Gemini / Nano Banana Pro:
+Carmen Electra B and David Banner main atlases, plus 11 injury maps for David Banner,
+Xzibit, Sticky Fingaz A/B, Blaze Story C, D-Mob C and Memphis Bleek. Banner's crown
+hair tile is corrected in his main and both injury maps; his original costume
+artwork is retained. The other **205 PNG files are byte-identical to 1.0.2**.
+
+The pack retains **218 texture IDs** for **69 named characters**: 80 main/outfit/Story
+atlases, 133 secondary maps (132 injury images and one uninjured head), and five
+shared inputs. All **213 fighter atlas/secondary entries** now have AI-assisted
+Rich Original Detail restorations. The five shared sparkle/tape inputs remain
+native originals for shader/blend fidelity. No local-neural trials are included.
+
+| Texture group | Original | HD Fighters 1.1 |
+| --- | --- | --- |
+| Main/outfit/Story atlases | 512 × 512 | 2048 × 2048 |
+| Secondary/injury maps | 256 × 256 | 1024 × 1024 |
+| Four shared sparkle inputs | 64 × 64 | 64 × 64, unchanged |
+| Shared tape input | 32 × 64 | 32 × 64, unchanged |
+
+[Download 1.1.0](https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighters/1.1.0/eddb7f68011788751472739de059aae9eaf130b8b479fcdcc14c72d88df0be0e/hd-fighters-v1.1.0.zip): **681,534,159 bytes**
+(681.53 MB); unpacked **681,681,076 bytes**, **223 files**.
+SHA-256: `eddb7f68011788751472739de059aae9eaf130b8b479fcdcc14c72d88df0be0e`.
+
+Install/update **HD Fighters** through **Mods > Textures > Browse > Refresh Catalogue**,
+enable it, give it priority over optional Faithful HD/Recomp HD fighter textures,
+then restart. Faithful HD is optional; no rebuild is needed. Manual installs use
+the intact `hd-fighters-v1-1-0` folder inside the game's data `mods` directory.
+This launcher archive retains game **0.12.1** / **textures-v1** compatibility.
+Thunderstore receives a separate wrapper around the identical 223-file pack payload.
+
+Source UV geometry, material alpha and muted skin/clothing palette are retained.
+No models, rigs, animations, executable code or gameplay changes are included.
+Artwork approval is complete; representative native injury/Story transitions,
+transparent materials and distant mip behavior still need playtesting.
+
+Original contributions retain **CC BY-NC 4.0**, with both licence files byte-identical
+to the prior release. Original game artwork and third-party rights are excluded.
+[Interactive comparisons](https://vyanhursky.github.io/DefJamFFNY-recomp/hd-fighters/)
+and the existing approved screenshots remain available.
+
 ## 1.0.1 — licence and attribution update
 
 The original, legally protectable contributions by **Vlad Yanhursky / vyanhursky**
