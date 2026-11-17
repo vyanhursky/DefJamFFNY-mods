@@ -129,6 +129,31 @@
         "sha256": "eddb7f68011788751472739de059aae9eaf130b8b479fcdcc14c72d88df0be0e",
         "root": "hd-fighters-v1-1-0"
       }
+    },
+    {
+      "version": "1.1.1",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "thunderstore-zip-v1"
+      ],
+      "reviewed": "2026-11-17",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd"
+      ],
+      "archive": {
+        "size": 681806499,
+        "unpacked_size": 681681076,
+        "file_count": 223,
+        "sha256": "92178ecb813f135113c30c6e00d424b8df9a6d85894b3748575b7a4b081e11e6",
+        "root": "hd-fighters-v1-1-0",
+        "urls": [
+          "https://thunderstore.io/package/download/DefJamRecompiled/HD_Fighters/1.1.1/"
+        ]
+      }
     }
   ]
 }

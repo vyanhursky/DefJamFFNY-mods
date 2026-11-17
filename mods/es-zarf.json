@@ -32,6 +32,32 @@
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/es-zarf/1.0.0/ed01b9995b465366daa66cc0701e0c28d8c164e891e31c01ee9ca564a68a1b45/es-zarf-v1.0.0.zip"
         ]
       }
+    },
+    {
+      "version": "1.0.1",
+      "channel": "stable",
+      "min_recomp": "0.13.0",
+      "capabilities": [
+        "language-v1",
+        "textures-v1",
+        "thunderstore-zip-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-11-17",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [],
+      "archive": {
+        "size": 31780753,
+        "unpacked_size": 33368662,
+        "file_count": 195,
+        "sha256": "058d348c27f2bbbb5820168b20cd442b709a6466d5af6bc4d83cb95a5e876469",
+        "root": "es-zarf",
+        "urls": [
+          "https://thunderstore.io/package/download/DefJamRecompiled/ZARFs_Spanish_Translation/1.0.1/",
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/es-zarf/1.0.1/058d348c27f2bbbb5820168b20cd442b709a6466d5af6bc4d83cb95a5e876469/es-zarf-v1.0.1.zip"
+        ]
+      }
     }
   ],
   "revoked_versions": [],

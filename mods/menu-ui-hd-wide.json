@@ -287,6 +287,34 @@
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/menu-ui-hd-wide/1.7.1/8e77e344d2bfdf1194f8ecde7b445c951a3b11e3716a11450101ed08c0e15114/menu-ui-hd-wide-v1.7.1.zip"
         ]
       }
+    },
+    {
+      "version": "1.7.3",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "thunderstore-zip-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-11-17",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels"
+      ],
+      "archive": {
+        "size": 615973850,
+        "unpacked_size": 615807576,
+        "file_count": 1792,
+        "sha256": "d964924de355daa485ebfdc8cbc2871bad556d7dd55ba1b1e7860e99f15f3efe",
+        "root": "menu-ui-hd-wide-v1-7-1",
+        "urls": [
+          "https://thunderstore.io/package/download/DefJamRecompiled/HD_Menus_and_UI/1.7.3/"
+        ]
+      }
     }
   ]
 }

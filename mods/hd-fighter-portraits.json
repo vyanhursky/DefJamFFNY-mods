@@ -65,6 +65,34 @@
           "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-fighter-portraits/1.0.1/074cbe506e7da9fcb0911959cefec92ecd865f723ff06258d2b9873b4f1631db/hd-fighter-portraits-v1.0.1.zip"
         ]
       }
+    },
+    {
+      "version": "1.0.3",
+      "channel": "stable",
+      "min_recomp": "0.12.1",
+      "capabilities": [
+        "textures-v1",
+        "thunderstore-zip-v1"
+      ],
+      "reviewed": "2026-11-17",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [
+        "faithful-hd",
+        "faithful-hd-a512d2429f11-opacity",
+        "faithful-hd-a512d2429f11-channels",
+        "menu-ui-hd-wide"
+      ],
+      "archive": {
+        "size": 752372698,
+        "unpacked_size": 752351179,
+        "file_count": 2189,
+        "sha256": "4520b552bc42e439846bd4929dd5df085bc257137b470b51e0bfddb0d0431e05",
+        "root": "hd-fighter-portraits-v1-0-1",
+        "urls": [
+          "https://thunderstore.io/package/download/DefJamRecompiled/HD_Fighter_Portraits/1.0.3/"
+        ]
+      }
     }
   ]
 }
