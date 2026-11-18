@@ -39,6 +39,13 @@ the language mod, then Play. Disable it and restart to return to English. Credit
 and CC BY-NC-SA 4.0 attribution travel with the download. See
 [the release notes](docs/es-zarf-1.0.0.md).
 
+**Portuguese (Brazil) Translation 1.0** is available for game 1.2.0 or later, downloaded
+from [JJalesTeam's Thunderstore listing](https://thunderstore.io/c/def-jam-fight-for-ny-recompiled/p/JJalesTeam/Portuguese_Translation/).
+It adapts SanVG's PS2 translation (hosted, with permission to re-use, by Joao13) with
+Portuguese font accents, 193 recreated 4× HD images, widescreen menu art and voice
+subtitles. Credits and CC BY-NC-SA 4.0 attribution travel with the download. See
+[the release notes](docs/pt-br-sanvg-1.0.0.md).
+
 This repository holds reviewed JSON metadata, validation tools, and the
 signed GitHub Pages index. Derived artwork downloads belong on an external host
 (Cloudflare R2, moving to the [Thunderstore community](https://thunderstore.io/c/def-jam-fight-for-ny-recompiled/)

@@ -1,0 +1,41 @@
+{
+  "id": "pt-br-sanvg",
+  "name": "Portuguese (Brazil) Translation",
+  "description": "Brazilian Portuguese (PT-BR) translation adapted from SanVG's PS2 translation: menus, Story subtitles, memory-unit messages, Portuguese font accents, 193 recreated 4x HD textures, translated widescreen menu art and voice subtitles for fighter intros and victories, shops, tutorial and voicemail. Voices remain original. Replaces the game's built-in French slot. Voice subtitles need game 1.2.0. Enable one language at a time in Mods; disable and restart to return to English.",
+  "authors": [
+    "SanVG (original Portuguese translation and art, PS2)",
+    "Joao13 / Joao13 Traduções (hosting and permission)",
+    "jjalles-dev (PC Recompiled adaptation)"
+  ],
+  "licence": "CC BY-NC-SA 4.0 (Portuguese translation and adaptation; re-use and re-hosting permitted by Joao13); original game artwork rights remain with their respective owners.",
+  "homepage": "https://thunderstore.io/c/def-jam-fight-for-ny-recompiled/p/JJalesTeam/Portuguese_Translation/",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "channel": "stable",
+      "min_recomp": "1.2.0",
+      "capabilities": [
+        "language-v1",
+        "textures-v1",
+        "thunderstore-zip-v1",
+        "wide-v1"
+      ],
+      "reviewed": "2026-11-18",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [],
+      "archive": {
+        "size": 122854149,
+        "unpacked_size": 126596492,
+        "file_count": 260,
+        "sha256": "1500c1b65e1ab334244920a49d511689fa9ea4f22cd546d8f3e2e572b0373723",
+        "root": "pt-br-sanvg",
+        "urls": [
+          "https://thunderstore.io/package/download/JJalesTeam/Portuguese_Translation/1.0.0/"
+        ]
+      }
+    }
+  ],
+  "revoked_versions": [],
+  "class": "linked"
+}
