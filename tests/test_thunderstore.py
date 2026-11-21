@@ -124,6 +124,13 @@ class ThunderstorePackaging(unittest.TestCase):
         self.assertEqual(ts.short_description(sentence + ' ' + 'word ' * 80), sentence)
         self.assertLessEqual(len(ts.short_description('word ' * 80)), 250)
 
+    def test_fighter_readme_uses_zip_import_not_texture_copy_instructions(self):
+        version = dict(self.fx.mod['versions'][0], capabilities=['fighters-v1'], min_recomp='1.2.1')
+        text = ts.readme(self.fx.mod, version, 'synthetic-fighter')
+        self.assertIn('Mods → Fighters', text)
+        self.assertIn('Install or update from ZIP', text)
+        self.assertNotIn('extract the', text)
+
 
 if __name__ == '__main__':
     unittest.main()

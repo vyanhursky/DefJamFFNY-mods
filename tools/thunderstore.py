@@ -65,6 +65,28 @@ def make_icon(source):
 
 def readme(mod, version, root):
     authors = ', '.join(mod['authors'])
+    if 'fighters-v1' in version['capabilities']:
+        return f"""# {mod['name']}
+
+{mod['description']}
+
+## Install
+
+Requires [Def Jam Recompiled]({GAME}) {version['min_recomp']} or later.
+
+Open **Mods → Fighters** in the launcher, refresh the catalogue and choose
+**Install and enable** for **{mod['name']}**. For a manual Thunderstore download,
+select or drop the ZIP in **Mods → Fighters**, choose **Install or update from ZIP**,
+then enable the installed fighter pack and Play. Keep the download intact.
+
+## Credits and licence
+
+By {authors}.
+
+{mod['licence']}
+
+More information: {mod['homepage']}
+"""
     return f"""# {mod['name']}
 
 {mod['description']}
