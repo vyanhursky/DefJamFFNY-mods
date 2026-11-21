@@ -1,4 +1,4 @@
-"""Texture/language ZIP verifier, kept aligned with the game helper's schema-1 contract.
+"""Texture/language/fighter ZIP verifier, aligned with the released game helper.
 
 Source: DefJamFFNY-recomp/setup/mods.py. No asset bytes are stored here.
 """
@@ -10,12 +10,14 @@ import re
 import shutil
 import stat
 import struct
+import wave
 import zipfile
 import catalogue as contract
 MAX_FILE = 512 * 1024**2
 MAX_ARCHIVE = 8 * 1024**3
 MAX_FILES = 65536
 ALLOWED = {'.ini', '.png', '.dds', '.json', '.txt', '.md', '.djd'}
+FIGHTER_FILES = {'.bin', '.xsh', '.wav', '.elf', '.o'}
 # Thunderstore packages: storefront files beside the one pack folder, opted in per
 # catalogue version by this capability (same rules as the game helper).
 STOREFRONT = 'thunderstore-zip-v1'
@@ -123,6 +125,27 @@ def validate_language(folder):
 
 
 def validate_pack(folder):
+    if (folder / 'fighters.json').exists():
+        check(not (folder / 'manifest.ini').exists() and not (folder / 'language.ini').exists(),
+              'Fighter packages cannot mix texture/language manifests')
+        from fighter_check import validate_fighter
+        result = validate_fighter(folder)
+        # Inventory proves closed source schemas, declarations and hashes. Also
+        # check media containers before the key-free publishing job scans them.
+        for path in folder.rglob('*'):
+            if path.suffix.lower() == '.png':
+                image_shape(path, png_only=True)
+            elif path.suffix.lower() == '.wav':
+                try:
+                    with wave.open(str(path), 'rb') as audio:
+                        check(audio.getnchannels() == 1 and audio.getsampwidth() == 2
+                              and audio.getcomptype() == 'NONE', 'Fighter WAV must be mono PCM16')
+                        count, rate = audio.getnframes(), audio.getframerate()
+                        check(0 < count <= 4_000_000 and 8000 <= rate <= 48000, 'Fighter WAV exceeds sample/rate bounds')
+                        check(len(audio.readframes(count)) == count * 2, 'Truncated fighter WAV')
+                except (wave.Error, EOFError) as error:
+                    raise ModError('Invalid fighter WAV') from error
+        return result
     if (folder / 'language.ini').exists():
         result = validate_language(folder)
         if (folder / 'manifest.ini').exists():
@@ -216,6 +239,8 @@ def unpack_archive(archive, descriptor, destination, cancelled=lambda: None, sto
     contract.slug(root)
     files, seen, size, wrapper = [], set(), 0, {}
     with zipfile.ZipFile(archive) as bundle:
+        fighter = root + '/fighters.json' in bundle.namelist()
+        allowed = ALLOWED | FIGHTER_FILES if fighter else ALLOWED
         check(len(bundle.infolist()) <= MAX_FILES * 2, 'Too many archive entries')
         for row in bundle.infolist():
             cancelled()
@@ -232,7 +257,7 @@ def unpack_archive(archive, descriptor, destination, cancelled=lambda: None, sto
             check(parts[0] == root, 'Unexpected archive root')
             if row.is_dir():
                 continue
-            check(len(parts) > 1 and PurePosixPath(name).suffix.lower() in ALLOWED
+            check(len(parts) > 1 and PurePosixPath(name).suffix.lower() in allowed
                   and row.file_size <= MAX_FILE, 'Unsupported/oversized archive file')
             size += row.file_size
             files.append((row, parts[1:]))
@@ -262,4 +287,8 @@ def unpack_archive(archive, descriptor, destination, cancelled=lambda: None, sto
             sync_directory(directory)
         sync_directory(destination)
         pack = validate_pack(destination)
+        if fighter:
+            check(pack['fighter_id'] == root, 'Fighter identity differs from its archive root')
+            check(version is None or pack['fighter_version'] == version,
+                  'Fighter version differs from the catalogue version')
     return dict(files=hashes, **pack)

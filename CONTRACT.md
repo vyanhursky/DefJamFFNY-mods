@@ -1,7 +1,7 @@
-# Draft texture catalogue contract, schema 1
+# Mod catalogue contract, schema 1
 
 One `mods/<id>.json` source file per mod. `tools/catalogue.py` strictly validates
-the fields below; unknown fields fail. This draft is not a deployed protocol.
+the fields below; unknown fields fail. The live index is signed before publication.
 
 Mod fields: `id`, `name`, `description`, `authors` (nonempty string list),
 `class` (`linked` or `original`), `licence` (text describing actual permissions),
@@ -14,11 +14,24 @@ Version fields: `version` (three-part SemVer, optional prerelease), `channel`
 `load_after` (lists of stable mod IDs), and `archive`.
 `load_after` is a recommendation, not a hidden second load order. The helper
 supports schema-1 texture packs and language packs, including a language pack's
-own texture manifest. No scripts, recipes, or native code are accepted.
+own texture manifest, plus typed Fighter Mod Support packages. Host executables
+and scripts remain forbidden.
 Language releases require `language-v1` and game 0.13.0 or later; their own images
 also require `textures-v1`, and widescreen slabs require `wide-v1`. Language
 targets and `DJDELTA1` headers use the released game helper's validation grammar;
 source/output hashes are checked against the player's dump at runtime.
+
+Fighter releases require `fighters-v1`; Thunderstore wrappers additionally require
+`thunderstore-zip-v1`. The archive root, catalogue ID and `fighters.json` identity
+must agree, and the fighter version must match the catalogue version. Every file
+must be declared and hash-checked under the pinned released fighter inventory
+validator. PNG and PCM WAV containers are checked; unknown files and mixed
+texture/language manifests fail closed. Fighter source formats and native asset
+data remain subject to the game's full compiler, original-dump, rig and ownership
+validation on the player's computer. This catalogue check does not execute or
+compile game code and does not establish native gameplay acceptance.
+See [fighter verification](docs/fighter-catalogue.md) for the exact source pin
+and separation from the protected signing job.
 
 Archive fields: `urls` (nonempty HTTPS list), `size` (compressed bytes),
 `unpacked_size` (payload bytes), `file_count`, `sha256` (lowercase hex),

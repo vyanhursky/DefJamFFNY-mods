@@ -10,6 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Check out pinned game-free fighter validator
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: vyanhursky/DefJamFFNY-recomp
+          ref: 2496bd3429a854a842701070cbeb5a54c5e3f445
+          path: .fighter-validator
+          persist-credentials: false
       - run: |
           python3 -m venv .validation-python
           .validation-python/bin/pip install cryptography==50.0.2 cffi==2.0.0 pycparser==2.23 Pillow==12.3.0

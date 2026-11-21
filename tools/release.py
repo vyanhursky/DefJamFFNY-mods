@@ -85,6 +85,9 @@ def verify_downloads(rows, scan=True):
                     if target.exists():shutil.rmtree(target)
                     pack=unpack_archive(destination,descriptor,target,storefront=STOREFRONT in version['capabilities'],version=version['version'])
                     catalogue.require(set(pack['capabilities'])<=set(version['capabilities']),'Required pack capability omitted')
+                    if pack.get('category')=='fighters':
+                        catalogue.require(pack['fighter_id']==mod['id'],'Fighter identity differs from catalogue ID')
+                        catalogue.require(set(pack['requires'])<=set(version['depends']),'Catalogue omits fighter dependencies')
                     if scan:subprocess.run(['clamscan','--recursive','--infected','--no-summary',str(target)],check=True)
                     shutil.rmtree(target);destination.unlink()
 

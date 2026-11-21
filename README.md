@@ -3,6 +3,14 @@
 Source for the signed curated mod list used by
 [Def Jam Recompiled](https://github.com/vyanhursky/DefJamFFNY-recomp).
 
+**2PAC Fighter Restoration Mod 1.6.36** adds a selectable CAF-based fighter with
+three outfits, custom appearance/UI, authored entrance/victory and custom voice
+lines. Game **1.2.1 or later** is required. Downloaded from the
+[Thunderstore listing](https://thunderstore.io/c/def-jam-fight-for-ny-recompiled/p/DefJamRecompiled/2PAC_Fighter_Restoration_Mod/),
+with original texture/initial-pack credit to whoonthetrack and UI/animation work
+to vyanhursky. Once the signed index is published, refresh **Mods → Fighters**
+and choose **Install and enable**. See [verification and qualification](docs/fighter-catalogue.md).
+
 **HD Fighters 1.1.0** restores the final 13 fighter textures, including Carmen
 Electra B, David Banner and the remaining injury maps. It contains 213 AI-assisted
 fighter atlas/secondary restorations plus five preserved shared inputs; the other
@@ -59,6 +67,7 @@ and its tests additionally use pinned `cryptography==50.0.2`, `cffi==2.0.0`,
 `pycparser==2.23` and `Pillow==12.3.0`, as recorded in the workflows.
 
 ```sh
+git clone --depth 1 --branch v1.2.1 https://github.com/vyanhursky/DefJamFFNY-recomp.git .fighter-validator
 python -m unittest discover -s tests -v
 python tools/catalogue.py validate
 python tools/catalogue.py build --revision 1 --issued 2026-10-21T00:00:00Z --expires 2026-11-20T00:00:00Z --out /tmp/mod-index.json

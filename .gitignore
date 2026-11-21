@@ -9,3 +9,4 @@ dist/
 *.key
 .release-python/
 .validation-python/
+.fighter-validator/

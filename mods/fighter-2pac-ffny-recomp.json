@@ -1,0 +1,30 @@
+{
+  "id": "fighter-2pac-ffny-recomp",
+  "name": "2PAC Fighter Restoration Mod",
+  "description": "2PAC as a fighter, with bespoke animations, voice lines, model, and textures. Three selectable outfits in-game: Shirtless, Red Wings, and Birdie. Includes custom UI artwork and 27 combat recordings mapped across 81 voice slots.",
+  "authors": ["whoonthetrack", "vyanhursky"],
+  "class": "linked",
+  "licence": "Original texture work and initial modpack by whoonthetrack; UI and animation work by vyanhursky. Contributor attribution is not a new redistribution licence. Original game and other third-party rights remain with their respective owners.",
+  "homepage": "https://thunderstore.io/c/def-jam-fight-for-ny-recompiled/p/DefJamRecompiled/2PAC_Fighter_Restoration_Mod/",
+  "versions": [
+    {
+      "version": "1.6.36",
+      "channel": "stable",
+      "min_recomp": "1.2.1",
+      "capabilities": ["fighters-v1", "thunderstore-zip-v1"],
+      "reviewed": "2026-11-21",
+      "depends": [],
+      "conflicts": [],
+      "load_after": [],
+      "archive": {
+        "urls": ["https://thunderstore.io/package/download/DefJamRecompiled/2PAC_Fighter_Restoration_Mod/1.6.36/"],
+        "size": 106100388,
+        "unpacked_size": 107137857,
+        "file_count": 117,
+        "sha256": "cc21219670b0f8b58a1c28d5f3d310a7827d95590535197ce4d682a3aa725fde",
+        "root": "fighter-2pac-ffny-recomp"
+      }
+    }
+  ],
+  "revoked_versions": []
+}
