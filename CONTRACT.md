@@ -39,6 +39,12 @@ Archive fields: `urls` (nonempty HTTPS list), `size` (compressed bytes),
 Runtime minimum/capability values must come from measured compatibility evidence.
 An entry is not compatible merely because its JSON validates.
 
+Story customization source packs declare `compositor=story-caf-v1` in their
+texture manifest and require both `textures-v1` and `story-caf-v1` in catalogue
+metadata. Their minimum recomp version is **1.2.4 or newer**. The verifier detects
+the manifest capability and rejects unknown compositor names; metadata validation
+rejects an earlier runtime minimum. Existing ordinary texture packs are unchanged.
+
 Thunderstore uploads: a version whose `capabilities` include `thunderstore-zip-v1`
 may also carry `manifest.json`, `README.md`, a 256x256 `icon.png` and optionally
 `CHANGELOG.md` at the ZIP root, beside the one pack folder. No other root file is

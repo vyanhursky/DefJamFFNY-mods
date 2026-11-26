@@ -19,6 +19,23 @@ sys.path.pop(0)
 
 
 class ReleaseTests(unittest.TestCase):
+    def test_story_compositor_is_detected_and_unknown_values_rejected(self):
+        with tempfile.TemporaryDirectory() as scratch:
+            root = Path(scratch)
+            png = io.BytesIO()
+            Image.new('RGBA', (8, 8), 'black').save(png, format='PNG')
+            (root / 'ink.png').write_bytes(png.getvalue())
+            for compositor in ('story-caf-v1', 'unknown'):
+                (root / 'manifest.ini').write_text(
+                    '[pack]\nschema=1\ncompositor=' + compositor + '\nmin_recomp=1.2.4\n'
+                    '[textures]\n' + 'a' * 64 + '=ink.png\n')
+                if compositor == 'unknown':
+                    with self.assertRaisesRegex(ValueError, 'Unsupported texture compositor'):
+                        package_check.validate_pack(root)
+                else:
+                    self.assertEqual(package_check.validate_pack(root)['capabilities'],
+                                     ['textures-v1', 'story-caf-v1'])
+
     def test_empty_release_signs_only_with_reviewed_pin(self):
         with tempfile.TemporaryDirectory() as scratch:
             root=Path(scratch);(root/'mods').mkdir()
