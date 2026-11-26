@@ -1,0 +1,44 @@
+{
+  "id": "hd-textures-medium",
+  "name": "HD Textures - Medium",
+  "description": "Story Mode Customization HD Textures: 4,961 reviewed clothing, tattoo, jewelry and hair textures. Medium is 2x PNG. Requires recomp 1.2.4 or newer; enable one edition.",
+  "authors": [
+    "Vlad Yanhursky / vyanhursky"
+  ],
+  "licence": "CC BY-NC 4.0 for original legally protectable contributions by Vlad Yanhursky / vyanhursky; original game artwork and third-party rights excluded.",
+  "homepage": "https://vyanhursky.github.io/DefJamFFNY-recomp/hd-textures/",
+  "revoked_versions": [],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "channel": "stable",
+      "min_recomp": "1.2.4",
+      "capabilities": [
+        "textures-v1",
+        "story-caf-v1",
+        "thunderstore-zip-v1"
+      ],
+      "reviewed": "2026-11-25",
+      "depends": [],
+      "conflicts": [
+        "hd-textures-high",
+        "hd-textures-ultra"
+      ],
+      "load_after": [
+        "faithful-hd"
+      ],
+      "archive": {
+        "root": "hd-textures-medium-v1-0-0",
+        "size": 1059223893,
+        "sha256": "de58243845f3d35f95dcb400435f9d487f16bd5c56a265ba2797f54475bba27d",
+        "file_count": 4969,
+        "unpacked_size": 1059980121,
+        "urls": [
+          "https://thunderstore.io/package/download/DefJamRecompiled/HD_Textures_Medium/1.0.0/",
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-textures-medium/1.0.0/de58243845f3d35f95dcb400435f9d487f16bd5c56a265ba2797f54475bba27d/DefJamRecompiled-HD_Textures_Medium-1.0.0.zip"
+        ]
+      }
+    }
+  ],
+  "class": "linked"
+}
