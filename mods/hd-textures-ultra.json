@@ -1,0 +1,44 @@
+{
+  "id": "hd-textures-ultra",
+  "name": "HD Textures - Ultra",
+  "description": "Story Mode Customization HD Textures: 4,961 reviewed clothing, tattoo, jewelry and hair textures. Ultra is 4x PNG. Requires recomp 1.2.4 or newer; enable one edition.",
+  "authors": [
+    "Vlad Yanhursky / vyanhursky"
+  ],
+  "licence": "CC BY-NC 4.0 for original legally protectable contributions by Vlad Yanhursky / vyanhursky; original game artwork and third-party rights excluded.",
+  "homepage": "https://vyanhursky.github.io/DefJamFFNY-recomp/hd-textures/",
+  "revoked_versions": [],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "channel": "stable",
+      "min_recomp": "1.2.4",
+      "capabilities": [
+        "textures-v1",
+        "story-caf-v1",
+        "thunderstore-zip-v1"
+      ],
+      "reviewed": "2026-11-25",
+      "depends": [],
+      "conflicts": [
+        "hd-textures-medium",
+        "hd-textures-high"
+      ],
+      "load_after": [
+        "faithful-hd"
+      ],
+      "archive": {
+        "root": "hd-textures-ultra-v1-0-0",
+        "size": 3881140757,
+        "sha256": "5ab758f1c082038ff2bbe2030b21178fa8d7174b9c699b0c0ee2ac9bbdcf24ee",
+        "file_count": 4969,
+        "unpacked_size": 3881914239,
+        "urls": [
+          "https://thunderstore.io/package/download/DefJamRecompiled/HD_Textures_Ultra/1.0.0/",
+          "https://pub-9167b11f83f24f2a9e21af7f0e225057.r2.dev/hd-textures-ultra/1.0.0/5ab758f1c082038ff2bbe2030b21178fa8d7174b9c699b0c0ee2ac9bbdcf24ee/DefJamRecompiled-HD_Textures_Ultra-1.0.0.zip"
+        ]
+      }
+    }
+  ],
+  "class": "linked"
+}
