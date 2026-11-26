@@ -23,6 +23,19 @@ def fixture():
 
 
 class CatalogueTests(unittest.TestCase):
+    def test_story_compositor_requires_supported_runtime_and_textures(self):
+        value = fixture()
+        row = value['versions'][0]
+        row.update(min_recomp='1.2.4', capabilities=['textures-v1', 'story-caf-v1'])
+        catalogue.validate_mod(value)
+        for minimum in ('0.12.1', '1.2.3'):
+            row['min_recomp'] = minimum
+            with self.subTest(minimum=minimum), self.assertRaisesRegex(ValueError, '1.2.4'):
+                catalogue.validate_mod(value)
+        row.update(min_recomp='1.2.4', capabilities=['story-caf-v1'])
+        with self.assertRaisesRegex(ValueError, 'textures-v1'):
+            catalogue.validate_mod(value)
+
     def test_valid_fixture(self):
         self.assertEqual(catalogue.validate_mod(fixture())['id'], 'test-paper')
 

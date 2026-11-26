@@ -84,6 +84,10 @@ def validate_mod(mod):
         require(row['channel'] == ('prerelease' if parsed[4] else 'stable'), 'Channel mismatch')
         require(not version(row['min_recomp'])[4], 'Minimum runtime must be a stable version')
         strings(row['capabilities'], slug)
+        if 'story-caf-v1' in row['capabilities']:
+            require('textures-v1' in row['capabilities'], 'Story compositor requires textures-v1')
+            require(tuple(map(int, version(row['min_recomp']).groups()[:3])) >= (1, 2, 4),
+                    'Story compositor requires recomp 1.2.4 or newer')
         text(row['reviewed'])
         require(dt.date.fromisoformat(row['reviewed']).isoformat() == row['reviewed'], 'Invalid review date')
         for key in ('depends', 'conflicts', 'load_after'):
